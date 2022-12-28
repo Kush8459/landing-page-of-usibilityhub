@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-quaries.css">
 </head>
 <body>
     
@@ -24,7 +25,7 @@
                 <img src="./assets/asset 1.png" alt="company-logo">
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -34,6 +35,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -162,7 +166,7 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
 
             <div class="feature-img imgg">
                 <img src="./assets/asset 21.png" alt="">
@@ -268,19 +272,19 @@
     <section class="big-feature-section">
         <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
 
-            <div class="feature-img imgg">
+            <!-- <div class="feature-img imgg">
                 <img src="./assets/asset 40.png" alt="">
-            </div>
+            </div> -->
 
             <div  class="feature-desk flex">
 
-                <div class="feature-desk-up">
+                <!-- <div class="feature-desk-up">
                     <h3>No Participants?</h3>
                     <h3>No problem.</h3><br>
                     <p>Our integrated panel allows you to quickly and affordably recruit research participants that precisely match your target audience.</p>
-                </div>
+                </div> -->
 
-                <div class="feature-desk-below">
+                <!-- <div class="feature-desk-below">
                     <h4>Our panel includes:</h4><br>
                     <div class="flex opy" >
                             <ul style="list-style-type:circle;" >
@@ -298,48 +302,11 @@
                         <div class="tpp">
                         <a href="#" class="primary-button">Get Started</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
-
-<!-- 
-        <div class="pagecontainer">
-            <div class="featuresummary featuresummary--reversed">
-               
-                <div class="featuresummary-column featuresummary-column--verticalpadded">
-                    <h2 class="heading h2 light">
-                        <span>No participants?<br>No problem.</span>
-                    </h2>
-                    <div class="text subheader light spacebelow">Our integrated panel allows you to quickly and affordably recruit research participants that precisely match your target audience.</div>
-                    <div class="heading h5 light">Our panel includes:
-                        <br>
-                    </div>
-                    <div class="demographiclist demographiclist--light spacebelow w-row">
-                        <div class="w-col w-col-6 w-col-tiny-tiny-stack">
-                            <ul role="list" class="featurelist">
-                                <li class="featurelist-item">450k+ panel participants</li>
-                                <li class="featurelist-item"><a href="https://help.usabilityhub.com/en/articles/4953292-demographic-targeting#demo" target="_blank" class="panelfeaturelistlink">35+ demographic options</a></li>
-                                <li class="featurelist-item">Free demographic targeting</li>
-                            </ul>
-                        </div>
-                        <div class="w-col w-col-6 w-col-tiny-tiny-stack">
-                            <ul role="list" class="featurelist">
-                                <li class="featurelist-item">Coverage in 100+ countries</li>
-                                <li class="featurelist-item">Average 5hr turn around time</li>
-                                <li class="featurelist-item">Response quality guarantee
-                                    <strong>
-                                        <br>
-                                    </strong>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="/product/panel" class="button button--blue w-button">Learn more</a>
-                </div>
-            </div>
-        </div> -->
 
         <!-- cta-section -->
     <section class="cta-section">
@@ -401,5 +368,14 @@
 
 
     <script src="https://kit.fontawesome.com/9517637411.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
